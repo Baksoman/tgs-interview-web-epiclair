@@ -1,0 +1,576 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins); /* import font Poppins dari google font */
+@import url(https://fonts.googleapis.com/css?family=MedievalSharp); /* import font MedievalSharp dari google font */
+@import url(https://fonts.googleapis.com/css?family=Kings); /* import font Kingd dari google font */
+
+/* styling design background body html */
+body{ 
+    background-image: linear-gradient(270deg, #e1d5b8 0%, #b0bfa8 10%, #7ea998 40%, #7ea998 60%, #b0bfa8 90%, #e1d5b8 100%); /* background utama web */
+    overflow-x: hidden;
+}
+
+/* agar seluruh elemen menjadi border box, margin 0, dan padding 0 */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* styling navigation bar */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 60px;
+    background-color: rgba(40, 102, 110, .95);
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* styling ukuran logo */
+.logo img{
+    width: 20px;
+    margin-right: auto;
+    transition: .3s;
+}
+
+/* styling font, ukuran, warna tombol navigation bar */
+.navbar .nav-button-container a{
+    font-size: 18px;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    color: #E1D5B8;
+    text-decoration: none;
+    font-weight: 700;
+
+    margin-right: 60px;
+    transition: .3s;
+    line-height: 20px;
+}
+
+/* styling agar muncul shadow di tombol navigation bar ketika di hover */
+.navbar .nav-button-container a:hover{
+    text-shadow: 0 0 10px hsl(41, 41%, 80%);
+    font-size: 20px;
+    transition: .3s;
+}
+
+/* styling ukuran logo berubah dan muncul shadow di logo ketika di hover */
+.logo img:hover{
+    filter: drop-shadow(0 0 6px hsl(45, 74%, 80%));
+    transform: scale(1.2, 1.2);
+    transition: .4s;
+}
+
+/* styling warna tombol navigation bar berubah ketika di click */
+.navbar .nav-button-container a:active{
+    text-shadow: 0 0 10px hsl(42, 41%, 65%);
+    color: hsl(42, 41%, 65%);
+}
+
+/* styling ukuran logo jadi 1x ketika di click */
+.logo img:active{
+    transform: scale(1, 1);
+}
+
+/* styling icon sidebar tidak kelihatan */
+#sidebar-active, .open-sidebar-button, .close-sidebar-button{
+    display: none;
+}
+
+
+/* styling posisi Judul utama dan slogan 
+posisi di flex kolom kiri*/
+#slide1 .text1{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 15rem;
+    margin-left: 8rem;
+}
+
+/* styling font, warna, ukuran judul utama */
+#slide1 .title{
+    font-family: MedievalSharp, Arial, Helvetica, sans-serif;
+    font-size: 10vw; 
+    font-weight: 700;
+    color: hsl(42, 41%, 75%);
+    text-shadow: 0px 0px 0 rgb(229,204,130),
+    -1px 1px 0 rgb(219,194,120),
+    -2px 2px 0 rgb(210,185,111),
+    -3px 3px 0 rgb(200,175,101),
+    -4px 4px 0 rgb(191,166,92),
+    -5px 5px 0 rgb(182,157,83),
+    -6px 6px 0 rgb(172,147,73),
+    -7px 7px 0 rgb(163,138,64),
+    -8px 8px 0 rgb(153,128,54),
+    -9px 9px 0 rgb(144,119,45),
+    -10px 10px 0 rgb(170, 152, 64),
+    0 0 10px rgb(187, 153, 80),
+    0 0 20px rgb(187, 153, 80),
+    0 0 30px rgb(187, 153, 80),
+    0 0 40px rgb(187, 153, 80);
+}
+
+/* styling font, warna, ukuran slogan */
+#slide1 .slogan{
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    font-size: 4.2vw;
+    font-weight: 1000;
+    color: rgb(243, 242, 242);
+    text-shadow: 0 0 10px #efede8;
+}
+
+/* styling ukuran background home 100 view dan menutupi*/
+#slide1 .background{
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+}
+
+/* styling flex kolom pedang dan batu */
+#slide1 .sword-in-stone{
+    display: flex;
+    flex-direction: column;
+}
+
+/* styling posisi dan ukuran batu */
+#slide1 .rock1, #slide1 .rock2{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: 53%;
+    right: 10%;
+    overflow-x: hidden;
+}
+
+/* styling posisi dan ukuran pedang */
+#slide1 .sword{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: -100%;
+    right: 10%;
+    animation: drop 0.5s ease-in-out forwards;
+    animation-delay: 1s;
+    overflow-x: hidden;
+    transition: .5s;
+}
+
+/* animasi jatuh pedang */
+@keyframes drop {
+    0% {
+      top: -100%;
+    }
+    100% {
+      top: 30%;
+    }
+}
+
+/* pedang akan menyala ketika di hover */
+#slide1 .sword:hover{
+    cursor: pointer;
+    filter: drop-shadow(0 0 10px hsl(45, 74%, 80%));
+    transition: .5s;
+}
+
+/* animasi menarik pedang */
+@keyframes click {
+    0% { 
+        top: 30%;
+    }
+    50%{
+        top: 20%;
+    }
+    100% {
+        top: 30%;
+    }
+}
+
+
+/* styling ukuran dan posisi section kedua 
+ukuran 100 view dan posisinya di flex kolom tengah*/
+#slide2{
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+}
+
+/* styling font, ukuran, warna judul section kedua */
+#slide2 .slide2-title{
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 1000;
+    text-align: center;
+    margin-top: 50px;
+    color: #E1D5B8;
+    text-shadow: 0 0 10px #227985, 0 0 50px #227985;
+}
+
+/* styling ukuran kotak swiper 70 view dan warnanya */
+#slide2 .swiper{
+    width: 70vw;
+    height: 70vh;
+    background-color: rgba(225, 213, 184, .5);
+    border: .1rem solid #e1d5b8;
+    border-radius: 56px;
+}
+
+/* styling ukuran video di dalam kotak swiper
+fit nya cover biar tidak stretch atau penyet */
+#slide2 .swiper-slide video{
+    width: 80%;
+    height: 76.5%;
+    margin-left: 10%;
+    object-fit: cover;
+    border-radius: 40px;
+}
+
+/* styling font, ukuran, warna nama lomba di dalam kotak swiper */
+#slide2 .swiper-slide p{
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    font-weight: 1000;
+    text-align: center;
+    padding: 2%;
+    color: rgba(40, 102, 110, .95);
+    text-shadow: 0 0 10px rgba(40, 102, 110, .5);
+}
+
+/* styling warna tombol swipe */
+#slide2 .swiper-button-prev, #slide2 .swiper-button-next{
+    color: transparent;
+    font-weight: 1000;
+    background-clip: text;
+    background-color: #7ea998;
+    transition: .3s;
+}
+
+/* styling warna titik titik di dalam kotak swiper */
+#slide2 .swiper .swiper-pagination-bullet-active{
+    background-color: #7ea998;
+}
+
+/* styling warna tombol swipe ketika di hover */
+#slide2 .swiper-button-prev:hover, #slide2 .swiper-button-next:hover{
+    text-shadow: 0 0 10px #7ea998, 0 0 11px #7ea998, 0 0 12px #7ea998;
+    transition: .3s;
+}
+
+/* styling warna tombol swipe ketika di click */
+#slide2 .swiper-button-prev:active, #slide2 .swiper-button-next:active{
+    text-shadow: 0 0 10px #678b7c, 0 0 11px #678b7c, 0 0 12px #678b7c;
+    transition: .3s;
+}
+
+
+/* styling ukuran section ketiga 100 view dan di flex kolom tengah*/
+#slide3{
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* styling font, ukuran, warna judul section ketiga */
+#slide3 .slide3-title{
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    font-size: 3.5rem;
+    font-weight: 1000;
+    text-align: center;
+    margin-top: 50px;
+    color: rgba(40, 102, 110, .95);
+    text-shadow: 0 0 10px rgb(40, 102, 110);
+    
+}
+
+/* styling flex kolom container antar pertandingan */
+#slide3 .fighter-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* styling flex kolom antara text "round" dan kontainer fighter*/
+#slide3 .fighter-round{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* styling font, ukuran nama fighter serta warna untuk text"round" */
+#slide3 .fighter-round .round, #slide3 .fighter-name{
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    font-weight: 1000;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1vh;
+    color: rgba(40, 102, 110, .95);
+    text-shadow: 0 0 10px rgb(40, 102, 110);
+}
+
+/* styling flex menyebar horizontal dan warna, ukuran background container */
+#slide3 .fighter-match{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1%;
+
+    background-image: linear-gradient(110deg, rgba(34, 121, 133, 1) 51%, rgba(27, 140, 156, 1) 51%);
+    border-radius: 30px;
+    border: .1rem solid #227985;
+    height: 18vh;
+    margin: 0 10vw;
+}
+
+/* styling ukuran foto fighter */
+#slide3 .fighter-match img{
+    width: 95%;
+    height: 9.5vh;
+    margin-top: 10px;
+}
+
+/* styling font dan ukuran text "VS" */
+#slide3 .fighter-match .vs{
+    font-family: Kings, Arial, Helvetica, sans-serif;
+    font-size: 8vw;
+}
+
+/* styling warna huruf "V" */
+#slide3 .letter1{
+    color: rgba(27, 140, 156, 1);
+    text-shadow: 0 0 10px rgb(40, 102, 110);
+}
+
+/* styling warna huruf "S" */
+#slide3 .letter2{
+    color: rgba(34, 121, 133, 1);
+    text-shadow: 0 0 10px rgba(27, 140, 156, 1);
+}
+
+/* styling flex kolom tengah antara foto fighter dengan nama fighter */
+#slide3 .fighter-profile{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: .3rem;
+}
+
+/* styling warna nama fighter */
+#slide3 .fighter-name{
+    color: #E1D5B8;
+}
+
+
+/* styling ukuran section keempat 100 view dan flex kolom tengah */
+#slide4{
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+}
+
+/* styling font, ukuran, warna judul text (About Us) section keempat */
+#slide4 .slide4-title{
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    font-weight: 1000;
+    color: rgba(40, 102, 110, .95);
+    text-shadow: 0 0 10px rgb(40, 102, 110);
+    text-align: center;
+}
+
+/* styling font, ukuran, warna deskripsi "about us" */
+#slide4 .slide4-desc{
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 1000;
+    text-align: justify;
+    margin: 0 10vw;
+    color: white;
+}
+
+/* styling lebar scrollbar */
+::-webkit-scrollbar{
+    width: 15px;
+}
+/* styling warna track scrollbar */
+::-webkit-scrollbar-track{
+    background:#e1d5b8;
+}
+/* styling warna thumb scrollbar */
+::-webkit-scrollbar-thumb{
+    background: rgba(40, 102, 110, .95);   
+}
+
+
+/* styling kondisi jika lebar layar < 650 px */
+@media(max-width: 650px){
+
+    /* styling flex space-between dan tengah navbar */
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* styling posisi dan warna sidebar */
+    .nav-button-container{
+        position: fixed;
+        background-color: rgb(40, 102, 110);
+        width: 350px;
+        height: 100%;
+        top: 0;
+        left: -350px;
+        padding: 20px;
+        transition: .5s;
+    }
+
+    /* styling flex kolom center tombol-tombol a sidebar */
+    .nav-button-container a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 40px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+
+    /* icon garis tiga jadi muncul */
+    .open-sidebar-button {
+        display: block; 
+        cursor: pointer;
+        transition: .4s;
+    }
+
+    /* icon silang jadi muncul */
+    .close-sidebar-button {
+        display: block; 
+        cursor: pointer;
+        margin-left: 260px;
+        transition: .4s;
+    }
+
+    /* styling warna dan posisi overlay di belakang sidebar */
+    .overlay{
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: .5s;
+    }
+
+    /* simbol sidebar dan silang akan menyala ketika di hover */
+    .open-sidebar-button:hover, .close-sidebar-button:hover{
+        filter: drop-shadow(0 0 8px hsl(0, 0%, 100%));
+        transition: .4s;
+    }
+
+    /* tombol sidebar akan muncul dari kiri ke kanan ketika di click simbol sidebar */
+    #sidebar-active:checked ~ .nav-button-container{
+        left: 0px;
+    }
+
+    /* overlay akan menjadi 0,1 opacity dan berada di belakang sidebar ketika sidebar click */
+    #sidebar-active:checked ~ .overlay{
+        position: fixed;
+        opacity: .1;
+        transition: .5s;
+    }
+}
+
+/* styling ketika lebar layar < 480 px */
+@media(max-width: 480px) {
+    
+    /* styling posisi text1 */
+    #slide1 .text1{
+        margin-top: 90%;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: 20px;
+    }
+
+    /* styling font, warna, ukuran judul utama */
+    #slide1 .title{
+        font-family: MedievalSharp, Arial, Helvetica, sans-serif;
+        font-size: 10vw; 
+        font-weight: 700;
+        color: hsl(42, 41%, 75%);
+        text-shadow: 0px 0px 0 rgb(229,204,130),
+        -1px 1px 0 rgb(219,194,120),
+        -2px 2px 0 rgb(210,185,111),
+        -3px 3px 0 rgb(200,175,101),
+        -4px 4px 0 rgb(191,166,92),
+        -5px 5px 0 rgb(182,157,83),
+        -6px 6px 0 rgb(172,147,73),
+        -7px 7px 0 rgb(163,138,64),
+        -8px 8px 0 rgb(153,128,54),
+        -9px 9px 0 rgb(144,119,45),
+        -10px 10px 0 rgb(170, 152, 64),
+        0 0 10px rgb(187, 153, 80),
+        0 0 20px rgb(187, 153, 80),
+        0 0 30px rgb(187, 153, 80),
+        0 0 40px rgb(187, 153, 80);
+    }
+
+    /* styling font, warna, ukuran slogan */
+    #slide1 .slogan{
+        font-family: Poppins, Arial, Helvetica, sans-serif;
+        font-size: 4.2vw;
+        font-weight: 1000;
+        color: rgb(243, 242, 242);
+        text-shadow: 0 0 10px #efede8;
+        text-align: center;
+    }
+
+    /* styling flex kolom pedang dan batu */
+    #slide1 .sword-in-stone{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    /* styling posisi dan ukuran batu */
+    #slide1 .rock1, #slide1 .rock2{
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        right: 0;
+        overflow-x: hidden;
+    }
+
+    /* styling posisi dan ukuran pedang */
+    #slide1 .sword{
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        right: 0;
+        animation: drop 0.5s ease-in-out forwards;
+        animation-delay: 1s;
+        overflow-x: hidden;
+        transition: .5s;
+    }
+}

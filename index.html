@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/> <!-- dari swiperjs.com-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- dari https://michalsnik.github.io/aos/ -->
+</head>
+<body>
+
+    <!-- ini bagian navigation bar -->
+    <nav class="navbar">
+
+            <input type="checkbox" id="sidebar-active">
+            <label for="sidebar-active" class="open-sidebar-button">                
+                <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+            </label>
+
+            <label class="overlay" for="sidebar-active"></label>
+
+            <div class="nav-button-container">
+
+                <label for="sidebar-active" class="close-sidebar-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                </label>
+
+                <a href="index.html#slide1">Home</a>
+                <a href="index.html#slide2">Types</a>
+                <a href="index.html#slide3">Matches</a>
+                <a href="index.html#slide4">About</a>
+                    
+            </div>
+                
+            <a href="index.html#slide1" class="logo"><img src="resource/sword_logo.png" alt="sword_logo"></a>
+
+    </nav>
+
+    <!-- ini section pertama (Judul dan slogan) -->
+    <div id="slide1">
+        <div class="sword-in-stone">
+            <img class="rock2" src="resource/rock2.png">
+            <img class="sword" src="resource/sword.png">
+            <img class="rock1" src="resource/rock1.png">
+        </div>
+        <div class="text1">
+            <p class="title" data-aos="fade-right"
+            data-aos-delay="300"
+            data-aos-duration="500">EPICRAWL</p>
+            <p class="slogan" data-aos="fade-right"
+            data-aos-delay="500"
+            data-aos-duration="500">The Chosen One</p>
+        </div>
+        <img class="background" src="resource/background.png">
+    </div>
+
+    <!-- ini section kedua (Types of Matches) -->
+    <div id="slide2">
+        <p class="slide2-title" data-aos="fade-down"
+        data-aos-delay="300"
+        data-aos-duration="500">Types of Matches</p>
+
+        <div class="swiper" data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+        data-aos-delay="300"
+        data-aos-duration="500">
+                
+            <div class="swiper-wrapper">    
+                <div class="swiper-slide">
+                    <p>NAMA LOMBA 1</p> <!--IRON FIST-->
+                    <video autoplay loop muted src="resource/earth-bending-animation.mp4" type="video/mp4"></video>
+                </div>
+                <div class="swiper-slide">
+                    <p>NAMA LOMBA 2</p> <!--DRAGON'S PATH-->
+                    <video autoplay loop muted src="resource/fire-bending-animation.mp4" type="video/mp4"></video>
+                </div>
+                <div class="swiper-slide">
+                    <p>NAMA LOMBA 3</p> <!--CRIMSON BREATH-->
+                    <video autoplay loop muted src="resource/air-bending-animation.mp4" type="video/mp4"></video>
+                </div>
+                <div class="swiper-slide">
+                    <p>NAMA LOMBA 4</p> <!--HYDRO VALOR-->
+                    <video autoplay loop muted src="resource/water_bending_animation.mp4" type="video/mp4"></video>
+                </div>
+                
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            
+        </div>
+    </div>
+
+    <!-- ini section ketiga (Matches) -->
+    <div id="slide3">
+        <p class="slide3-title">Matches</p>
+        <div class="fighter-container">
+
+            <div class="fighter-round">
+                <p class="round" data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom"
+                data-aos-delay="1000"
+                data-aos-duration="500">ROUND 1</p>
+                <div class="fighter-match" data-aos="fade-down"
+                data-aos-anchor-placement="center-bottom"
+                data-aos-delay="300"
+                data-aos-duration="500">
+                    <div class="fighter-profile" data-aos="fade-left"
+                    data-aos-anchor-placement="top-bottom"
+                    data-aos-delay="1000"
+                    data-aos-duration="500">
+                        <img src="resource/toad.png" alt="toad">
+                        <p class="fighter-name">Toad</p>
+                    </div>
+
+                    <p class="vs"><span class="letter1">V </span><span class="letter2">S</span></p>
+                    
+                    <div class="fighter-profile" data-aos="fade-right"
+                    data-aos-anchor-placement="top-bottom"
+                    data-aos-delay="1000"
+                    data-aos-duration="500">
+                        <img src="resource/jake.png" alt="jake">
+                        <p class="fighter-name">Jake</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="fighter-round">
+                <p class="round" data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom"
+                data-aos-delay="1050"
+                data-aos-duration="500">ROUND 2</p>
+                <div class="fighter-match" data-aos="fade-down"
+                data-aos-anchor-placement="center-bottom"
+                data-aos-delay="450"
+                data-aos-duration="500">
+                    <div class="fighter-profile" data-aos="fade-left"
+                    data-aos-anchor-placement="top-bottom"
+                    data-aos-delay="1050"
+                    data-aos-duration="500">
+                        <img src="resource/kirby.png" alt="kirby">
+                        <p class="fighter-name">Kirby</p>
+                    </div>
+                    
+                    <p class="vs"><span class="letter1">V </span><span class="letter2">S</span></p>
+                    
+                    <div class="fighter-profile" data-aos="fade-right"
+                    data-aos-anchor-placement="top-bottom"
+                    data-aos-delay="1050"
+                    data-aos-duration="500">
+                        <img src="resource/sonic.png" alt="snorlax">
+                        <p class="fighter-name">Sonic</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fighter-round">
+                <p class="round" data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom"
+                data-aos-delay="1150"
+                data-aos-duration="500">ROUND 3</p>
+                <div class="fighter-match" data-aos="fade-down"
+                data-aos-anchor-placement="center-bottom"
+                data-aos-delay="550"
+                data-aos-duration="500">
+                    <div class="fighter-profile" data-aos="fade-left"
+                    data-aos-anchor-placement="top-bottom"
+                    data-aos-delay="1150"
+                    data-aos-duration="500">
+                        <img src="resource/dory.png" alt="dory">
+                        <p class="fighter-name">Dory</p>
+                    </div>
+                    
+                    <p class="vs"><span class="letter1">V </span><span class="letter2">S</span></p>
+                    
+                    <div class="fighter-profile" data-aos="fade-right"
+                    data-aos-anchor-placement="top-bottom"
+                    data-aos-delay="1150"
+                    data-aos-duration="500">
+                        <img src="resource/shrek.png" alt="shrek">
+                        <p class="fighter-name">shrek</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ini section keempat (About Us) -->
+    <div id="slide4">
+        <p class="slide4-title" data-aos="zoom-in"
+        data-aos-anchor-placement="top-bottom"
+        data-aos-delay="300"
+        data-aos-duration="500">About Us</p>
+        <p class="slide4-desc" data-aos="zoom-in-up"
+        data-aos-anchor-placement="top-bottom"
+        data-aos-delay="300"
+        data-aos-duration="500">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eius distinctio iusto quae. Dolore pariatur dignissimos maxime dolores aliquid saepe unde voluptatum voluptatem repellendus? Deserunt asperiores repudiandae doloremque iste quas!
+        </p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> <!-- swiper diambil dari swiperjs.com -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!-- dari https://michalsnik.github.io/aos/ -->
+    <script>
+        const swiper = new Swiper('.swiper', {
+    loop: true,
+  
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true, // agar titik titik di dalam kotak swiper bisa dipencet dan ganti ke video yang sesuai
+    },
+  
+    navigation: {
+      nextEl: '.swiper-button-next', // agar tombol ">" responsive
+      prevEl: '.swiper-button-prev', // agar tombol "<" responsive
+    },
+    }); // ambil dari swiperjs.com
+
+    AOS.init(); // untuk mengaktifkan Animate On Scroll
+
+    const sword = document.querySelector("#slide1 .sword");
+
+    sword.addEventListener("click", () => {
+    sword.style.animation = "none"; // mengapus semua animasi yang ada
+    
+    setTimeout(() => { // function untuk animasi klik
+        sword.style.animation = "click 0.5s forwards";});
+    });
+    </script>
+</body>
+</html>
