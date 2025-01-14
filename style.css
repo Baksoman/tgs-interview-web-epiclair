@@ -411,11 +411,12 @@ fit nya cover biar tidak stretch atau penyet */
 }
 /* styling warna track scrollbar */
 ::-webkit-scrollbar-track{
-    background:#e1d5b8;
+    background: rgba(40, 102, 110, .95);
 }
 /* styling warna thumb scrollbar */
 ::-webkit-scrollbar-thumb{
-    background: rgba(40, 102, 110, .95);   
+    background: rgba(24, 71, 78, 0.95);
+    border-radius: 20px;
 }
 
 
